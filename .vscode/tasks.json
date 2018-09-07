@@ -1,0 +1,36 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "windows": {
+        "options": {
+            "shell": {
+                "executable": "cmd.exe",
+                "args": [
+                    "/d",
+                    "/c"
+                ]
+            }
+        },
+    },
+    "tasks": [
+        {
+            "label": "compile:native",
+            "type": "shell",
+            "command": "yarn",
+            "args": [
+                "compile:native"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "watch",
+            "type": "shell",
+            "command": "yarn watch",
+            "problemMatcher": [],
+        }
+    ]
+}
