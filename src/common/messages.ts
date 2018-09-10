@@ -13,5 +13,5 @@ export interface AddResponse extends Message {
     result: number;
 }
 
-export type Request = AddRequest;
-export type Response = AddResponse;
+export type Request = AddRequest /* | another request | ... */;
+export type Response = AddResponse /* | another response | ... */;
